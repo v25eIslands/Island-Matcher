@@ -1,0 +1,284 @@
+:root {
+    --accent-color: #853838;
+    --affordability-dark: #736700;
+    --affordability-light: #E8E182;
+    --residentServices-dark: #762F2F;
+    --residentServices-light: #E88282;
+    --greenSpace-dark: #39762F;
+    --greenSpace-light: #8CE882;
+    --tourism-dark: #2F7576;
+    --tourism-light: #82E8E3;
+    --userDensity-dark: #752F76;
+    --userDensity-light: #E382E8;
+    --accessibility-dark: #2F3676;
+    --accessibility-light: #8295E8;
+    --reachability-dark: #BA5D00;
+    --reachability-light: #E8A982;
+    --background-dark: #1A1616;
+    --background-light: #D9D9D9;
+    --text-dark: var(--background-dark);
+    --text-light: #666;
+    --slider-color: #d3d3d3;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--background-dark);
+    background-image: url(bg.png);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Jaldi';
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+header p {
+    color: white;
+    text-align: center;
+    font-family: 'Jaldi';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.questionnaire {
+    border-radius: 50px;
+    opacity: 0.9;
+    background: var(--background-light);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.criteria-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+
+.criteria-name {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#affordability-criteria {
+    color: var(--affordability-dark);
+}
+#residentServices-criteria {
+    color: var(--residentServices-dark);
+}
+#greenSpace-criteria {
+    color: var(--greenSpace-dark);
+}
+#tourism-criteria {
+    color: var(--tourism-dark);
+}
+#userDensity-criteria {
+    color: var(--userDensity-dark);
+}
+#accessibility-criteria {
+    color: var(--accessibility-dark);
+}
+#reachability-criteria {
+    color: var(--reachability-dark);
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-value {
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+input[type="range"] {
+    flex-grow: 1;
+    appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: var(--slider-color);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--light-text);
+    margin-top: 5px;
+}
+
+button {
+    background-color: var(--background-dark);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #5e5454;
+}
+
+#submit-btn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.results {
+    border-radius: 50px;
+    opacity: 0.9;
+    background: var(--background-light);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.result-card {
+    border: 1px solid var(--background-dark);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-card h3 {
+    color: var(--background-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.island-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--background-dark);
+}
+
+.stat-label {
+    font-weight: 600;
+}
+
+.similarity {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.similarity span:last-child {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+#try-again-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .island-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+#affordability::-webkit-slider-thumb {
+    background: var(--affordability-light);
+    outline: 2px solid var(--affordability-dark);
+    border-radius: 40%;
+}
+
+#residentServices::-webkit-slider-thumb {
+    background: var(--residentServices-light);
+    outline: 2px solid var(--residentServices-dark);
+    border-radius: 40%;
+}
+
+#greenSpace::-webkit-slider-thumb {
+    background: var(--greenSpace-light);
+    outline: 2px solid var(--greenSpace-dark);
+    border-radius: 40%;
+}
+
+#tourism::-webkit-slider-thumb {
+    background: var(--tourism-light);
+    outline: 2px solid var(--tourism-dark);
+    border-radius: 40%;
+}
+
+#userDensity::-webkit-slider-thumb {
+    background: var(--userDensity-light);
+    outline: 2px solid var(--userDensity-dark);
+    border-radius: 40%;
+}
+
+#accessibility::-webkit-slider-thumb {
+    background: var(--accessibility-light);
+    outline: 2px solid var(--accessibility-dark);
+    border-radius: 40%;
+}
+
+#reachability::-webkit-slider-thumb {
+    background: var(--reachability-light);
+    outline: 2px solid var(--reachability-dark);
+    border-radius: 40%;
+}
