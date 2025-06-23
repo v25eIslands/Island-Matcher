@@ -285,7 +285,6 @@ button:hover {
 
 footer {
     position: sticky;
-    bottom: 0;
     color: var(--text-light);
     text-align: center;
     justify-content: center;
