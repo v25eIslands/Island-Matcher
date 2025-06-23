@@ -285,6 +285,7 @@ button:hover {
 
 footer {
     position: sticky;
+    bottom: 0;
     color: var(--text-light);
     text-align: center;
     justify-content: center;
@@ -296,7 +297,7 @@ footer a {
     color: var(--text-light);
 }
 
-footer h3 {
+footer p {
     display: inline-block;
     width: 15rem;
 }
