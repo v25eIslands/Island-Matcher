@@ -282,3 +282,20 @@ button:hover {
     outline: 2px solid var(--reachability-dark);
     border-radius: 40%;
 }
+
+footer {
+    color: var(--text-light);
+    text-align: center;
+    justify-content: center;
+    background-color: #211E1E;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+footer h3 {
+    display: inline-block;
+    width: 15rem;
+}
